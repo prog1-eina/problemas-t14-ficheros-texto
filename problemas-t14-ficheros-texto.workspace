@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="problemas-t14-ficheros-texto" Database="" Version="10.0.0">
+  <Project Name="filtar-alumnos" Path="filtar-alumnos/filtar-alumnos.project" Active="No"/>
+  <Project Name="frecuencia-letras" Path="frecuencia-letras/frecuencia-letras.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="filtar-alumnos" ConfigName="Debug"/>
+      <Project Name="frecuencia-letras" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="filtar-alumnos" ConfigName="Release"/>
+      <Project Name="frecuencia-letras" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
