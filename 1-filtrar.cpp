@@ -45,7 +45,7 @@ void filtrar(istream& origen, ostream& destino, const unsigned int grupo) {
  *       «nombreDestino», solo el NIP y el nombre completo de aquellos alumnos
  *       que pertenecen al grupo indicado por el valor del parámetro «grupo».
  */
-void filtrar(const char nombreOrigen[], const char nombreDestino[],
+void filtrar(const string nombreOrigen, const string nombreDestino,
              const unsigned int grupo) {
     ifstream origen;
     origen.open(nombreOrigen);
