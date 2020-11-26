@@ -7,9 +7,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
-
-const int LONGITUD_MAXIMA = 250;
 
 /*
  * Pre:  «origen» es un flujo de entrada asociado a un texto donde cada línea
@@ -20,14 +19,14 @@ const int LONGITUD_MAXIMA = 250;
  *       «destino», solo el NIP y el nombre completo de aquellos alumnos que
  *       pertenecen al grupo indicado por el valor del parámetro «grupo».
  */
-void filtrar(istream& origen, ostream& destino, const int grupo) {
-    int nipAlumno;
+void filtrar(istream& origen, ostream& destino, const unsigned int grupo) {
+    unsigned int nipAlumno;
     origen >> nipAlumno;
     while (!origen.eof()) {
-        int grupoAlumno;
+        unsigned int grupoAlumno;
         origen >> grupoAlumno;
-        char nombreAlumno[LONGITUD_MAXIMA];
-        origen.getline(nombreAlumno, LONGITUD_MAXIMA);
+        string nombreAlumno;
+        getline(origen, nombreAlumno);
         if (grupoAlumno == grupo) {
             // «nombreAlumno» comienza con un separador
             destino << nipAlumno << nombreAlumno << endl;
@@ -47,7 +46,7 @@ void filtrar(istream& origen, ostream& destino, const int grupo) {
  *       que pertenecen al grupo indicado por el valor del parámetro «grupo».
  */
 void filtrar(const char nombreOrigen[], const char nombreDestino[],
-             const int grupo) {
+             const unsigned int grupo) {
     ifstream origen;
     origen.open(nombreOrigen);
     if (origen.is_open()) {
