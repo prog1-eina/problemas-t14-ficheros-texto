@@ -1,10 +1,9 @@
-﻿/********************************************************************************\
+﻿/******************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 2 de diciembre de 2019
+ * Última revisión: 26 de noviembre de 2020
  * Resumen: Soluciones a los problemas del tema 14: filtrar alumnos
- * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+\******************************************************************************/
 
 #include <iostream>
 #include <fstream>
@@ -14,9 +13,9 @@ const int LONGITUD_MAXIMA = 250;
 
 /*
  * Pre:  «origen» es un flujo de entrada asociado a un texto donde cada línea
- *       corresponde a los siguientes datos de un alumno, separados por espacios:
- *       NIP, grupo y nombre completo. «destino» es un flujo de salida asociado a
- *       un texto.
+ *       corresponde a los siguientes datos de un alumno, separados por
+ *       espacios: NIP, grupo y nombre completo. «destino» es un flujo de salida
+ *       asociado a un texto.
  * Post: Ha filtrado el contenido del flujo «origen» para dejar, en el flujo
  *       «destino», solo el NIP y el nombre completo de aquellos alumnos que
  *       pertenecen al grupo indicado por el valor del parámetro «grupo».
@@ -40,12 +39,12 @@ void filtrar(istream& origen, ostream& destino, const int grupo) {
 
 /*
  * Pre:  «nombreOrigen» es el nombre de un fichero de texto donde cada línea
- *       corresponde a los siguientes datos de un alumno, separados por espacios:
- *       NIP, grupo y nombre completo.
+ *       corresponde a los siguientes datos de un alumno, separados por
+ *       espacios: NIP, grupo y nombre completo.
  * Post: Ha filtrado un fichero cuyo nombre es el valor de «nombreOrigen» para
  *       dejar, en un fichero cuyo nombre es el del valor del parámetro
- *       «nombreDestino», solo el NIP y el nombre completo de aquellos alumnos que
- *       pertenecen al grupo indicado por el valor del parámetro «grupo».
+ *       «nombreDestino», solo el NIP y el nombre completo de aquellos alumnos
+ *       que pertenecen al grupo indicado por el valor del parámetro «grupo».
  */
 void filtrar(const char nombreOrigen[], const char nombreDestino[],
              const int grupo) {
@@ -77,6 +76,6 @@ void filtrar(const char nombreOrigen[], const char nombreDestino[],
  * Este programa no escribe nada en la pantalla si la ejecución es correcta.
  */
 int main() {
-    filtrar("../alumnos.txt", "../alumnos-tardes.txt", 412);
+    filtrar("alumnos.txt", "alumnos-tardes.txt", 412);
     return 0;
 }

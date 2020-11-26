@@ -1,10 +1,9 @@
-﻿/********************************************************************************\
+﻿/******************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 28 de noviembre de 2018
+ * Última revisión: 26 de noviembre de 2020
  * Resumen: Soluciones a los problemas del tema 14: frecuencias de letras
- * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+\******************************************************************************/
 
 #include <iostream>
 #include <fstream>
@@ -13,11 +12,11 @@ using namespace std;
 
 
 /*
- * Pre:  «nombreFichero» es el nombre de un fichero de texto válido y el número de
- *       componentes de la tabla «frecuencias» es igual al número de letras del
- *       alfabeto inglés.
- * Post: Ha asignado a la tabla «frecuencias» el número de apariciones de cada una
- *       de las letras del alfabeto inglés en el fichero cuyo nombre es
+ * Pre:  «nombreFichero» es el nombre de un fichero de texto válido y el número
+ *       de componentes de la tabla «frecuencias» es igual al número de letras
+ *       del alfabeto inglés.
+ * Post: Ha asignado a la tabla «frecuencias» el número de apariciones de cada
+ *       una de las letras del alfabeto inglés en el fichero cuyo nombre es
  *       «nombreFichero», no estableciendo diferencias entre mayúsculas y
  *       minúsculas.
  */
@@ -49,8 +48,8 @@ void analizar(const char nombreFichero[], int frecuencias[]) {
 
 /*
  * Pre:  ---
- * Post: Ha escrito en la pantalla una tabla con las frecuencias de apariciones de
- *       las letras según los valores de la tabla «frecuencias». La primera
+ * Post: Ha escrito en la pantalla una tabla con las frecuencias de apariciones
+ *       de las letras según los valores de la tabla «frecuencias». La primera
  *       componente de la tabla es el número de veces que aparece la letra A, la
  *       segunda, la letra B y así sucesivamente.
  */
@@ -64,6 +63,6 @@ void escribirFrecuencias(const int frecuencias[]) {
 int main() {
     const int NUM_LETRAS = 'Z' - 'A' + 1;
     int frecuencias[NUM_LETRAS];
-    analizar("../quijote.txt", frecuencias);
+    analizar("quijote.txt", frecuencias);
     escribirFrecuencias(frecuencias);
 }
