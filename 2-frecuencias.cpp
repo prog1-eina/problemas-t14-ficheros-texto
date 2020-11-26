@@ -6,8 +6,9 @@
 \******************************************************************************/
 
 #include <iostream>
-#include <fstream>
 #include <iomanip>
+#include <fstream>
+#include <string>
 using namespace std;
 
 
@@ -20,14 +21,14 @@ using namespace std;
  *       «nombreFichero», no estableciendo diferencias entre mayúsculas y
  *       minúsculas.
  */
-void analizar(const char nombreFichero[], int frecuencias[]) {
+void analizar(const string nombreFichero, unsigned int frecuencias[]) {
     // Inicializa la tabla de frecuencias
     for (char c = 'A'; c <= 'Z'; c++) {
         frecuencias[c - 'A'] = 0;
     }
 
     ifstream f;                     // Declara un flujo de entrada
-    f.open (nombreFichero);         // Lo asocia al fichero nombreFichero
+    f.open(nombreFichero);          // Lo asocia al fichero nombreFichero
     if (f.is_open()) {
         // Intenta leer el 1.er carácter y, si es letra, la pasa a mayúscula
         char c = toupper(f.get());
@@ -53,7 +54,7 @@ void analizar(const char nombreFichero[], int frecuencias[]) {
  *       componente de la tabla es el número de veces que aparece la letra A, la
  *       segunda, la letra B y así sucesivamente.
  */
-void escribirFrecuencias(const int frecuencias[]) {
+void escribirFrecuencias(const unsigned int frecuencias[]) {
     for (char letra = 'A'; letra <= 'Z'; letra++) {
         cout << letra << ": " << setw(7) << frecuencias[letra - 'A'] << endl;
     }
@@ -61,8 +62,9 @@ void escribirFrecuencias(const int frecuencias[]) {
 
 /* Programa de prueba */
 int main() {
-    const int NUM_LETRAS = 'Z' - 'A' + 1;
-    int frecuencias[NUM_LETRAS];
+    const unsigned int NUM_LETRAS = 'Z' - 'A' + 1;
+    unsigned int frecuencias[NUM_LETRAS];
     analizar("quijote.txt", frecuencias);
     escribirFrecuencias(frecuencias);
+    return 0;
 }
