@@ -1,0 +1,5 @@
+<fichero-alumnos-filtrado> ::= { <alumno-filtrado> }
+<alumno-filtrado> ::= <nip> <separador> <nombreCompleto> <fin-línea>
+<nip> ::= <literal-entero>
+<nombre-completo> ::= <literal-string>
+<separador> ::= " "
