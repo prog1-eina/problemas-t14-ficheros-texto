@@ -6,12 +6,9 @@
 \******************************************************************************/
 
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <string>
-using namespace std;
-
-#include <iostream>
-#include <iomanip>
 using namespace std;
 
 /*
