@@ -74,11 +74,12 @@ int main() {
     if (ok) {
         cout << "El carácter '" << caracter << "' aparece " 
              << apariciones << " veces." << endl;
+        return 0;
     }
     else {
         cerr << "No ha podido leerse el fichero \"" 
              << nombreFichero << "\"." << endl;
+        return 1;
     }
-    return 0;
 }
 
