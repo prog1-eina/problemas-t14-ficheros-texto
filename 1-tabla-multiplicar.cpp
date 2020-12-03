@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 27 de noviembre de 2020
+ * Última revisión: 3 de Diciembre de 2020
  * Resumen: Soluciones a los problemas del tema 14
 \******************************************************************************/
 
@@ -44,8 +44,9 @@ void escribirTablaEnFichero(const int n, const string nombreFichero) {
 }
 
 /*
- * Programa que solicita un número entero al usuario y escribe en la pantalla la
- * tabla de multiplicar correspondiente a ese número.
+ * Programa que solicita un número entero entre 1 y 10 y el nombre de un fichero 
+ * y guarda en el fichero con el nombre introducido por el usuario la tabla de multiplicar 
+ * correspondiente a ese número.
  */
 int main() {
     int n;
@@ -54,6 +55,7 @@ int main() {
         cin >> n;
     } while (n < 1 || n > 10);
 
+    // 1 <= n <= 10 
     cout << "Nombre del fichero: ";
     string nombreFichero;
     cin >> nombreFichero;
