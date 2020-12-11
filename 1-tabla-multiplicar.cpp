@@ -45,8 +45,8 @@ void escribirTablaEnFichero(const int n, const string nombreFichero) {
 
 /*
  * Programa que solicita un número entero entre 1 y 10 y el nombre de un fichero 
- * y guarda en el fichero con el nombre introducido por el usuario la tabla de multiplicar 
- * correspondiente a ese número.
+ * y guarda en el fichero con el nombre introducido por el usuario la tabla de 
+ * multiplicar correspondiente a ese número.
  */
 int main() {
     int n;
