@@ -3,6 +3,15 @@
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 3 de Diciembre de 2020
  * Resumen: Soluciones a los problemas del tema 14
+ * Nota: El programa completo está contenido en este fichero, por lo que puede 
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
+ *       Code.
+ *       También puede compilarse desde la terminal través de la orden
+ *           g++ -Wall -Wextra 1-tabla-multiplicar.cpp -o 1-tabla-multiplicar
+ *       y ejecutarse en Windows a través de la orden
+ *           .\1-tabla-multiplicar.exe
+ *       o en Linux y macOS
+ *           ./1-tabla-multiplicar
 \******************************************************************************/
 
 #include <iostream>
@@ -58,7 +67,7 @@ int main() {
     // 1 <= n <= 10 
     cout << "Nombre del fichero: ";
     string nombreFichero;
-    cin >> nombreFichero;
+    getline(cin, nombreFichero);
 
     escribirTablaEnFichero(n, nombreFichero);    
     return 0;

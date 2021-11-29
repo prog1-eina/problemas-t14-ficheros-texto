@@ -3,6 +3,15 @@
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 29 de noviembre de 2021
  * Resumen: Soluciones a los problemas del tema 14: filtrar alumnos
+ * Nota: El programa completo está contenido en este fichero, por lo que puede 
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
+ *       Code.
+ *       También puede compilarse desde la terminal través de la orden
+ *           g++ -Wall -Wextra 4-filtrar.cpp -o 4-filtrar
+ *       y ejecutarse en Windows a través de la orden
+ *           .\4-filtrar.exe
+ *       o en Linux y macOS
+ *           ./4-filtrar
 \******************************************************************************/
 
 #include <iostream>

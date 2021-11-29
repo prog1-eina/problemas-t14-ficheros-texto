@@ -3,6 +3,15 @@
  * Autores: Miguel Ángel Latre
  * Última revisión: 29 de noviembre de 2021
  * Resumen: Soluciones a los problemas del tema 14
+ * Nota: El programa completo está contenido en este fichero, por lo que puede 
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
+ *       Code.
+ *       También puede compilarse desde la terminal través de la orden
+ *           g++ -Wall -Wextra 3-copiar-intervalo-lineas.cpp -o 3-copiar-intervalo-lineas
+ *       y ejecutarse en Windows a través de la orden
+ *           .\3-copiar-intervalo-lineas.exe
+ *       o en Linux y macOS
+ *           ./3-copiar-intervalo-lineas
 \******************************************************************************/
 
 #include <iostream>
