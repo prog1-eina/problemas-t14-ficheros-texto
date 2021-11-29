@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Miguel Ángel Latre
- * Última revisión: 27 de noviembre de 2020
+ * Última revisión: 29 de noviembre de 2021
  * Resumen: Soluciones a los problemas del tema 14
 \******************************************************************************/
 
@@ -17,19 +17,15 @@ using namespace std;
  *       carácter «caracter» aparece en «flujo».
  */
 void contarApariciones(istream& flujo, const char caracter, 
-                       unsigned int& apariciones) {
+                       unsigned& apariciones) {
     apariciones = 0;
 
-    // Intenta leer un primer carácter del fichero
-    char caracterLeido = flujo.get();
-    while (!flujo.eof()) {
+    char caracterLeido;
+    while (flujo.get(caracterLeido)) {
         // Si el último intento de lectura tuvo éxito, procesa el carácter leído
         if (caracter == caracterLeido) {
             apariciones++;
         }
-
-        // Intenta leer el siguiente carácter del fichero
-        caracterLeido = flujo.get();
     }
 }
 
@@ -41,7 +37,7 @@ void contarApariciones(istream& flujo, const char caracter,
  *       devuelto «false».
  */
 bool contarApariciones(const string nombreFichero, const char caracter, 
-                       unsigned int& apariciones) {
+                       unsigned& apariciones) {
     ifstream f;
     f.open(nombreFichero);
     if (f.is_open()) {
@@ -69,7 +65,7 @@ int main() {
     char caracter;
     cin >> caracter;
 
-    unsigned int apariciones;
+    unsigned apariciones;
     bool ok = contarApariciones(nombreFichero, caracter, apariciones); 
     if (ok) {
         cout << "El carácter '" << caracter << "' aparece " 

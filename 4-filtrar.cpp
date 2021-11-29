@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 26 de noviembre de 2020
+ * Última revisión: 29 de noviembre de 2021
  * Resumen: Soluciones a los problemas del tema 14: filtrar alumnos
 \******************************************************************************/
 
@@ -19,11 +19,10 @@ using namespace std;
  *       «destino», solo el NIP y el nombre completo de aquellos alumnos que
  *       pertenecen al grupo indicado por el valor del parámetro «grupo».
  */
-void filtrar(istream& origen, ostream& destino, const unsigned int grupo) {
-    unsigned int nipAlumno;
-    origen >> nipAlumno;
-    while (!origen.eof()) {
-        unsigned int grupoAlumno;
+void filtrar(istream& origen, ostream& destino, const unsigned grupo) {
+    unsigned nipAlumno;
+    while (origen >> nipAlumno) {
+        unsigned grupoAlumno;
         origen >> grupoAlumno;
         string nombreAlumno;
         getline(origen, nombreAlumno);
@@ -31,7 +30,6 @@ void filtrar(istream& origen, ostream& destino, const unsigned int grupo) {
             // «nombreAlumno» comienza con un separador
             destino << nipAlumno << nombreAlumno << endl;
         }
-        origen >> nipAlumno;
     }
 }
 
@@ -46,7 +44,7 @@ void filtrar(istream& origen, ostream& destino, const unsigned int grupo) {
  *       que pertenecen al grupo indicado por el valor del parámetro «grupo».
  */
 void filtrar(const string nombreOrigen, const string nombreDestino,
-             const unsigned int grupo) {
+             const unsigned grupo) {
     ifstream origen;
     origen.open(nombreOrigen);
     if (origen.is_open()) {

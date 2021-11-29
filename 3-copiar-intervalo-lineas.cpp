@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Miguel Ángel Latre
- * Última revisión: 27 de noviembre de 2020
+ * Última revisión: 29 de noviembre de 2021
  * Resumen: Soluciones a los problemas del tema 14
 \******************************************************************************/
 
@@ -19,22 +19,15 @@ using namespace std;
  *       se encuentra dentro del intervalo [«lineaInicial», «lineaFinal»].
  */
 void copiar(istream& origen, ostream& destino,
-            const int lineaInicial, const int lineaFinal) {
-    unsigned int lineasLeidas = 0;
-
-    // Intenta leer una primera línea del flujo «origen»:
+            const unsigned lineaInicial, const unsigned lineaFinal) {
+    unsigned lineasLeidas = 0;
     string linea;
-    getline(origen, linea);
-
-    while (!origen.eof() && lineasLeidas < lineaFinal) {
+    while (getline(origen, linea) && lineasLeidas < lineaFinal) {
         // Si el último intento de lectura tuvo éxito, procesa la línea leída:
         lineasLeidas++;
         if (lineaInicial <= lineasLeidas && lineasLeidas <= lineaFinal) {
             destino << linea << endl;
         }
-
-        // Intenta leer la siguiente línea del flujo «origen»:
-        getline(origen, linea);
     }
 }
 
@@ -94,9 +87,12 @@ int main() {
     string ficheroDestino;
     cin >> ficheroDestino;
 
-    cout << "Escriba el intervalo de líneas a copiar: ";
     int lineaInicial, lineaFinal;
-    cin >> lineaInicial >> lineaFinal;
+    do {
+        cout << "Escriba el intervalo de líneas a copiar: ";
+        cin >> lineaInicial >> lineaFinal;
+    } while (lineaInicial <= 0 || lineaInicial > lineaFinal);
+    // 0 < lineaInicial ≤ lineaFinal
 
     bool ok = copiar(ficheroOrigen, ficheroDestino, lineaInicial, lineaFinal); 
     if (ok) {

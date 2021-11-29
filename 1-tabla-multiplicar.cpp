@@ -31,7 +31,7 @@ void escribirTablaEnFichero(const int n, const string nombreFichero) {
     f.open(nombreFichero);
     if (f.is_open()) {
         f << "LA TABLA DEL " << n << endl;
-        for (unsigned int i = 0; i <= 10; i++) {
+        for (unsigned i = 0; i <= 10; i++) {
             f << setw(3) << n << " x " << setw(2) << i << " = " 
               << setw(3) << n * i << endl;
         }
