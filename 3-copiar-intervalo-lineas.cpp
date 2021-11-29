@@ -91,8 +91,8 @@ int main() {
     do {
         cout << "Escriba el intervalo de líneas a copiar: ";
         cin >> lineaInicial >> lineaFinal;
-    } while (lineaInicial <= 0 || lineaInicial > lineaFinal);
-    // 0 < lineaInicial ≤ lineaFinal
+    } while (lineaInicial < 0 || lineaFinal < 0);
+    // lineaInicial ≥ 0 y lineaFinal ≥ 0
 
     bool ok = copiar(ficheroOrigen, ficheroDestino, lineaInicial, lineaFinal); 
     if (ok) {
