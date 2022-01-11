@@ -1,6 +1,6 @@
 # Problemas de ficheros de texto (tema 14)
 
-Soluciones a los problemas de la clase de problemas de ficheros de texto de la asignatura Programación 1.
+Soluciones a los problemas de la clase de problemas de ficheros de texto de la asignatura [Programación 1](https://github.com/prog1-eina) ([Grado en Ingeniería Informática](https://webdiis.unizar.es/~silarri/coordinadorGrado/), [Escuela de Ingeniería y Arquitectura](https://eina.unizar.es/), [Universidad de Zaragoza](https://www.unizar.es/)).
 
 Los enunciados pueden consultarse [aquí](https://miguel-latre.github.io/transparencias/pbs-tema-14-ficheros-de-texto.pdf)
 
