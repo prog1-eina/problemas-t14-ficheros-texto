@@ -35,12 +35,11 @@ bin/
 
 # CodeLite
 .codelite/
-*/*.txt
-!alumnos.txt
+!estudiantes.txt
 !quijote*.txt
 compile_commands.json
 */Debug/
 */Release/
 
 # Este repositorio
-alumnos-tardes.txt
+estudiantes-tardes.txt

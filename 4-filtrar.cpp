@@ -20,22 +20,22 @@ using namespace std;
 
 /*
  * Pre:  «origen» es un flujo de entrada asociado a un texto donde cada línea corresponde a los
- *       siguientes datos de un alumno, separados por espacios: NIP, grupo y nombre completo.
- *       «destino» es un flujo de salida asociado a un texto.
+ *       siguientes datos de un estudiante, separados por espacios: NIP, grupo y nombre
+ *       completo. «destino» es un flujo de salida asociado a un texto.
  * Post: Filtra el contenido del flujo «origen» para dejar, en el flujo «destino», solo el NIP
- *       y el nombre completo de aquellos alumnos que pertenecen al grupo indicado por el valor
+ *       y el nombre completo de cada estudiante que pertenece al grupo indicado por el valor
  *       del parámetro «grupo».
  */
 void filtrar(istream& origen, ostream& destino, const unsigned grupo) {
-    unsigned nipAlumno;
-    while (origen >> nipAlumno) {
-        unsigned grupoAlumno;
-        origen >> grupoAlumno;
-        string nombreAlumno;
-        getline(origen, nombreAlumno);
-        if (grupoAlumno == grupo) {
-            // «nombreAlumno» comienza con un separador
-            destino << nipAlumno << nombreAlumno << endl;
+    unsigned nip;
+    while (origen >> nip) {
+        unsigned grupoEstudiante;
+        origen >> grupoEstudiante;
+        string nombre;
+        getline(origen, nombre);
+        if (grupoEstudiante == grupo) {
+            // «nombre» comienza con un separador
+            destino << nip << nombre << endl;
         }
     }
 }
@@ -43,11 +43,11 @@ void filtrar(istream& origen, ostream& destino, const unsigned grupo) {
 
 /*
  * Pre:  «nombreOrigen» es el nombre de un fichero de texto donde cada línea corresponde a los
- *       siguientes datos de un alumno, separados por espacios en blanco: NIP, grupo y nombre
- *       completo.
+ *       siguientes datos de un estudiante, separados por espacios en blanco: NIP, grupo y
+ *       nombre completo.
  * Post: Filtra el contenido del fichero cuyo nombre es el valor de «nombreOrigen» para dejar,
  *       en un fichero cuyo nombre es el del valor del parámetro «nombreDestino», solo el NIP y
- *       el nombre completo de aquellos alumnos que pertenecen al grupo indicado por el valor
+ *       el nombre completo de cada estudiante que pertenece al grupo indicado por el valor
  *       del parámetro «grupo».
  */
 void filtrar(const string nombreOrigen, const string nombreDestino, const unsigned grupo) {
@@ -73,11 +73,11 @@ void filtrar(const string nombreOrigen, const string nombreDestino, const unsign
 
 
 /*
- * Función de prueba. El fichero «alumnos.txt» debe estar en el directorio del proyecto, donde
- * también se creará el fichero «alumnos-tardes.txt». Este programa no escribe nada en la
- * pantalla si la ejecución es correcta.
+ * Función de prueba. El fichero «estudiantes.txt» debe estar en el directorio del proyecto,
+ * donde también se creará el fichero «estudiantes-tardes.txt». Este programa no escribe nada
+ * en la pantalla si la ejecución es correcta.
  */
 int main() {
-    filtrar("alumnos.txt", "alumnos-tardes.txt", 412);
+    filtrar("estudiantes.txt", "estudiantes-tardes.txt", 412);
     return 0;
 }
