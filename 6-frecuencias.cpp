@@ -30,7 +30,7 @@ using namespace std;
  *       sucesivamente.
  */
 void analizar(const string nombreFichero, unsigned frecuencias[]) {
-    // Inicializa la tabla de frecuencias
+    // Inicializa el vector de frecuencias
     for (char c = 'A'; c <= 'Z'; c++) {
         frecuencias[c - 'A'] = 0;
     }
