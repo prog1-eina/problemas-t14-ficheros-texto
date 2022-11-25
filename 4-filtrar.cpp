@@ -22,9 +22,9 @@ using namespace std;
  * Pre:  «origen» es un flujo de entrada asociado a un texto donde cada línea corresponde a los
  *       siguientes datos de un alumno, separados por espacios: NIP, grupo y nombre completo.
  *       «destino» es un flujo de salida asociado a un texto.
- * Post: Ha filtrado el contenido del flujo «origen» para dejar, en el flujo «destino», solo el
- *       NIP y el nombre completo de aquellos alumnos que pertenecen al grupo indicado por el
- *       valor del parámetro «grupo».
+ * Post: Filtra el contenido del flujo «origen» para dejar, en el flujo «destino», solo el NIP
+ *       y el nombre completo de aquellos alumnos que pertenecen al grupo indicado por el valor
+ *       del parámetro «grupo».
  */
 void filtrar(istream& origen, ostream& destino, const unsigned grupo) {
     unsigned nipAlumno;

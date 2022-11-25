@@ -21,8 +21,7 @@ using namespace std;
 
 /*
  * Pre:  1 ≤ n ≤ 10
- * Post: Ha escrito en el fichero de nombre «nombreFichero» la tabla de
- *       multiplicar del «n»:
+ * Post: Escribe en el fichero de nombre «nombreFichero» la tabla de multiplicar del «n»:
  *
  *            LA TABLA DEL «n»
  *            «n» x  0 =  0
@@ -31,8 +30,8 @@ using namespace std;
  *                 ...
  *            «n» x  9 = ...
  *            «n» x 10 = ...
- *       Si no ha podido escribir el fichero de nombre «nombreFichero», ha
- *       escrito un mensaje de error en «cerr».
+ *       Si no puede escribir el fichero de nombre «nombreFichero», escribe un mensaje de
+ *       error en «cerr».
  */
 void escribirTablaEnFichero(const int n, const string nombreFichero) {
     ofstream f;
@@ -67,7 +66,7 @@ int main() {
 
     // Extracción del último '\n' del teclado
     cin.get(); 
-    
+
     cout << "Nombre del fichero: ";
     string nombreFichero;
     getline(cin, nombreFichero);
