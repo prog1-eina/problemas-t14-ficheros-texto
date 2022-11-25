@@ -22,13 +22,13 @@ using namespace std;
 
 
 /*
- * Pre:  «nombreFichero» es el nombre de un fichero de texto válido y el número
- *       de componentes de la tabla «frecuencias» es igual al número de letras
- *       del alfabeto inglés.
- * Post: Ha asignado a la tabla «frecuencias» el número de apariciones de cada
- *       una de las letras del alfabeto inglés en el fichero cuyo nombre es
- *       «nombreFichero», no estableciendo diferencias entre mayúsculas y
- *       minúsculas.
+ * Pre:  «nombreFichero» es el nombre de un fichero de texto válido y el número de componentes
+ *       del vector «frecuencias» es igual al número de letras del alfabeto inglés.
+ * Post: Asigna a cada componente del vector «frecuencias» el número de apariciones de cada una
+ *       de las letras del alfabeto inglés en el fichero cuyo nombre es «nombreFichero»,
+ *       no distinguiendo entre mayúsculas y minúsculas. La primera componente del vector es el
+ *       número de veces que aparece la letra A, la segunda, las de la letra B y así
+ *       sucesivamente.
  */
 void analizar(const string nombreFichero, unsigned frecuencias[]) {
     // Inicializa la tabla de frecuencias
@@ -57,11 +57,11 @@ void analizar(const string nombreFichero, unsigned frecuencias[]) {
 
 
 /*
- * Pre:  ---
- * Post: Ha escrito en la pantalla una tabla con las frecuencias de apariciones
- *       de las letras según los valores de la tabla «frecuencias». La primera
- *       componente de la tabla es el número de veces que aparece la letra A, la
- *       segunda, la letra B y así sucesivamente.
+ * Pre:  El número de componentes del vector «frecuencias» es igual al número de letras del
+ *       alfabeto inglés. La primera componente del vector es el número de veces que aparece la
+ *       letra A, la segunda, las de la letra B y así sucesivamente.
+ * Post: Escribe en la pantalla una tabla con las frecuencias de apariciones de las letras según
+ *       los valores de las componentes del vector «frecuencias».
  */
 void escribirFrecuencias(const unsigned frecuencias[]) {
     for (char letra = 'A'; letra <= 'Z'; letra++) {

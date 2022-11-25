@@ -44,16 +44,15 @@ void filtrar(istream& origen, ostream& destino, const unsigned grupo) {
 
 
 /*
- * Pre:  «nombreOrigen» es el nombre de un fichero de texto donde cada línea
- *       corresponde a los siguientes datos de un alumno, separados por
- *       espacios: NIP, grupo y nombre completo.
- * Post: Ha filtrado un fichero cuyo nombre es el valor de «nombreOrigen» para
- *       dejar, en un fichero cuyo nombre es el del valor del parámetro
- *       «nombreDestino», solo el NIP y el nombre completo de aquellos alumnos
- *       que pertenecen al grupo indicado por el valor del parámetro «grupo».
+ * Pre:  «nombreOrigen» es el nombre de un fichero de texto donde cada línea corresponde a los
+ *       siguientes datos de un alumno, separados por espacios en blanco: NIP, grupo y nombre
+ *       completo.
+ * Post: Filtra el contenido del fichero cuyo nombre es el valor de «nombreOrigen» para dejar,
+ *       en un fichero cuyo nombre es el del valor del parámetro «nombreDestino», solo el NIP y
+ *       el nombre completo de aquellos alumnos que pertenecen al grupo indicado por el valor
+ *       del parámetro «grupo».
  */
-void filtrar(const string nombreOrigen, const string nombreDestino,
-             const unsigned grupo) {
+void filtrar(const string nombreOrigen, const string nombreDestino, const unsigned grupo) {
     ifstream origen;
     origen.open(nombreOrigen);
     if (origen.is_open()) {
