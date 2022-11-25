@@ -1,18 +1,17 @@
-﻿/******************************************************************************\
+﻿/*********************************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 3 de Diciembre de 2020
  * Resumen: Soluciones a los problemas del tema 14
- * Nota: El programa completo está contenido en este fichero, por lo que puede 
- *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
- *       Code.
+ * Nota: El programa completo está contenido en este fichero, por lo que puede compilarse y
+ *       ejecutarse con la extensión Code Runner de Visual Studio Code.
  *       También puede compilarse desde la terminal través de la orden
  *           g++ -Wall -Wextra 1-tabla-multiplicar.cpp -o 1-tabla-multiplicar
  *       y ejecutarse en Windows a través de la orden
  *           .\1-tabla-multiplicar.exe
  *       o en Linux y macOS
  *           ./1-tabla-multiplicar
-\******************************************************************************/
+\*********************************************************************************************/
 
 #include <iostream>
 #include <iomanip>
@@ -65,6 +64,10 @@ int main() {
     } while (n < 1 || n > 10);
 
     // 1 <= n <= 10 
+
+    // Extracción del último '\n' del teclado
+    cin.get(); 
+    
     cout << "Nombre del fichero: ";
     string nombreFichero;
     getline(cin, nombreFichero);
