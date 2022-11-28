@@ -70,6 +70,31 @@ bool copiar(const string ficheroOrigen, const string ficheroDestino,
     }
 }
 
+/*
+ * Pre:  ---
+ * Post: Solicita al usuario el nombre de un fichero de texto existente, que asigna a
+ *       «nombreOrigen»; el nombre de un fichero nuevo, que asigna a «nombreDestino» y dos
+ *       enteros que representan un intervalo de líneas, que asigna a «lineaInicial» y
+ *       «lineaFinal», asegurándose de que ambos son mayores o iguales que 0.
+ */
+void pedirDatos(string& nombreOrigen, string& nombreDestino,
+                unsigned& lineaInicial, unsigned& lineaFinal) {
+    cout << "Nombre de un fichero existente: ";
+    cin >> nombreOrigen;
+
+    cout << "Nombre del fichero nuevo: ";
+    cin >> nombreDestino;
+
+    int inicio, fin;
+    do {
+        cout << "Escriba el intervalo de líneas a copiar: ";
+        cin >> inicio >> fin;
+    } while (inicio < 0 || fin < 0);
+    // inicio ≥ 0 y fin ≥ 0
+    lineaInicial = inicio;
+    lineaFinal = fin;
+}
+
 
 /*
  * Programa que solicita al usuario el nombre de un fichero de texto existente, el nombre de un
@@ -82,24 +107,12 @@ bool copiar(const string ficheroOrigen, const string ficheroDestino,
  * únicamente las líneas que se pueda del fichero existente, hasta llegar a su final.
  */
 int main() {
-    cout << "Nombre de un fichero existente: ";
-    string ficheroOrigen;
-    cin >> ficheroOrigen;
-
-    cout << "Nombre del fichero nuevo: ";
-    string ficheroDestino;
-    cin >> ficheroDestino;
-
-    int lineaInicial, lineaFinal;
-    do {
-        cout << "Escriba el intervalo de líneas a copiar: ";
-        cin >> lineaInicial >> lineaFinal;
-    } while (lineaInicial < 0 || lineaFinal < 0);
-    // lineaInicial ≥ 0 y lineaFinal ≥ 0
-
-    bool ok = copiar(ficheroOrigen, ficheroDestino, lineaInicial, lineaFinal); 
+    string nombreOrigen, nombreDestino;
+    unsigned lineaInicial, lineaFinal;
+    pedirDatos(nombreOrigen, nombreDestino, lineaInicial, lineaFinal);
+    bool ok = copiar(nombreOrigen, nombreDestino, lineaInicial, lineaFinal); 
     if (ok) {
-        cout << "Fichero \"" << ficheroDestino << "\" creado con éxito." << endl;
+        cout << "Fichero \"" << nombreDestino << "\" creado con éxito." << endl;
         return 0;
     }
     else {
