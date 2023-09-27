@@ -57,14 +57,12 @@ bool copiar(const string ficheroOrigen, const string ficheroDestino,
             origen.close();
             destino.close();
             return true;
-        }
-        else {
+        } else {
             origen.close();
             cerr << "No ha podido escribirse el fichero \"" << ficheroDestino << "\"." << endl;
             return false;
         }
-    }
-    else {
+    } else {
         cerr << "No ha podido leerse el fichero \"" << ficheroOrigen << "\"." << endl;
         return false;
     }
@@ -114,8 +112,7 @@ int main() {
     if (ok) {
         cout << "Fichero \"" << nombreDestino << "\" creado con éxito." << endl;
         return 0;
-    }
-    else {
+    } else {
         return 1;
     }
 }

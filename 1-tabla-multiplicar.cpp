@@ -43,8 +43,7 @@ void escribirTablaEnFichero(const int n, const string nombreFichero) {
               << setw(3) << n * i << endl;
         }
         f.close();
-    }
-    else {
+    } else {
         cerr << "No se ha podido crear el fichero \"" << nombreFichero << "\""
              << endl;
     }

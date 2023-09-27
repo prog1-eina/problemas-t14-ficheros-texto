@@ -59,14 +59,12 @@ void filtrar(const string nombreOrigen, const string nombreDestino, const unsign
         if (destino.is_open()) {
             filtrar(origen, destino, grupo);
             destino.close();
-        }
-        else {
+        } else {
             cerr << "No se ha podido escribir en el fichero \"" << nombreDestino
                  << "\"" << endl;
         }
         origen.close();
-    }
-    else {
+    } else {
         cerr << "No se ha podido leer del fichero \"" << nombreOrigen << "\"" << endl;
     }
 }

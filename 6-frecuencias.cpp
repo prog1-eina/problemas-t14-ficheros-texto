@@ -47,8 +47,7 @@ void analizar(const string nombreFichero, unsigned frecuencias[]) {
             }
         }
         f.close();                  // Libera el fichero y lo disocia de f
-    }
-    else {
+    } else {
         cerr << "No se ha podido leer del fichero \"" << nombreFichero << "\"." << endl;
     }
 }

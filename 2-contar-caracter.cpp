@@ -50,8 +50,7 @@ bool contarApariciones(const string nombreFichero, const char caracter,
         contarApariciones(f, caracter, apariciones);
         f.close();
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }
@@ -75,8 +74,7 @@ int main() {
     if (ok) {
         cout << "El carácter '" << caracter << "' aparece " << apariciones << " veces." << endl;
         return 0;
-    }
-    else {
+    } else {
         cerr << "No ha podido leerse el fichero \"" << nombreFichero << "\"." << endl;
         return 1;
     }
