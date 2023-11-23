@@ -1,7 +1,7 @@
 ﻿/*********************************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Miguel Ángel Latre
- * Última revisión: 29 de noviembre de 2021
+ * Última revisión: 23 de noviembre de 2023
  * Resumen: Soluciones a los problemas del tema 14
  * Nota: El programa completo está contenido en este fichero, por lo que puede compilarse y
  *       ejecutarse con la extensión Code Runner de Visual Studio Code.
@@ -39,19 +39,19 @@ void contarApariciones(istream& flujo, const char caracter, unsigned& aparicione
 /*
  * Pre:  ---
  * Post: Si se puede leer el fichero de nombre «nombreFichero», asigna al parámetro
- *       «apariciones» el número de veces que el carácter «caracter» aparece en el fichero y
- *       devuelve «true». En caso contrario, devuelve «false».
+ *       «apariciones» el número de veces que el carácter «caracter» aparece en el fichero y al
+ *       parámetro «lecturaOk» el valor «true». En caso contrario, asigna al parámetro
+ *       «lecturaOk» el valor «false».
  */
-bool contarApariciones(const string nombreFichero, const char caracter, 
-                       unsigned& apariciones) {
+void contarApariciones(const string nombreFichero, const char caracter, 
+                       unsigned& apariciones, bool& lecturaOk) {
+    lecturaOk = false;                        
     ifstream f;
     f.open(nombreFichero);
     if (f.is_open()) {
+        lecturaOk = true;
         contarApariciones(f, caracter, apariciones);
         f.close();
-        return true;
-    } else {
-        return false;
     }
 }
 
@@ -70,8 +70,9 @@ int main() {
     cin >> caracter;
 
     unsigned apariciones;
-    bool ok = contarApariciones(nombreFichero, caracter, apariciones); 
-    if (ok) {
+    bool lecturaOk;
+    contarApariciones(nombreFichero, caracter, apariciones, lecturaOk); 
+    if (lecturaOk) {
         cout << "El carácter '" << caracter << "' aparece " << apariciones << " veces." << endl;
         return 0;
     } else {
