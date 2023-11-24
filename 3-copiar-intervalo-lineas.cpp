@@ -1,7 +1,7 @@
 ﻿/*********************************************************************************************\
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Miguel Ángel Latre
- * Última revisión: 29 de noviembre de 2021
+ * Última revisión: 24 de noviembre de 2023
  * Resumen: Soluciones a los problemas del tema 14
  * Nota: El programa completo está contenido en este fichero, por lo que puede compilarse y
  *       ejecutarse con la extensión Code Runner de Visual Studio Code.
@@ -41,12 +41,13 @@ void copiar(istream& origen, ostream& destino,
 /*
  * Pre:  ---
  * Post: Copia en el fichero «ficheroDestino» las líneas del fichero «ficheroOrigen» cuyo
- *       número se encuentra dentro del intervalo [«lineaInicial», «lineaFinal»] y devuelve
- *       «true». Si el fichero «ficheroOrigen» no se puede leer o el fichero «ficheroDestino»
- *       no se puede escribir, escribe un mensaje de error y devuelve «false».
+ *       número se encuentra dentro del intervalo [«lineaInicial», «lineaFinal»] y asigna a
+ *       «ok» el valor «true». Si el fichero «ficheroOrigen» no se puede leer o el fichero
+ *       «ficheroDestino» no se puede escribir, escribe un mensaje de error y asigna a «ok» el
+ *       valor «false».
  */
-bool copiar(const string ficheroOrigen, const string ficheroDestino,
-            const int lineaInicial, const int lineaFinal) {
+void copiar(const string ficheroOrigen, const string ficheroDestino,
+            const int lineaInicial, const int lineaFinal, bool& ok) {
     ifstream origen;
     origen.open(ficheroOrigen);
     if (origen.is_open()) {
@@ -56,15 +57,15 @@ bool copiar(const string ficheroOrigen, const string ficheroDestino,
             copiar(origen, destino, lineaInicial, lineaFinal);
             origen.close();
             destino.close();
-            return true;
+            ok = true;
         } else {
             origen.close();
             cerr << "No ha podido escribirse el fichero \"" << ficheroDestino << "\"." << endl;
-            return false;
+            ok = false;
         }
     } else {
         cerr << "No ha podido leerse el fichero \"" << ficheroOrigen << "\"." << endl;
-        return false;
+        ok = false;
     }
 }
 
@@ -108,8 +109,9 @@ int main() {
     string nombreOrigen, nombreDestino;
     unsigned lineaInicial, lineaFinal;
     pedirDatos(nombreOrigen, nombreDestino, lineaInicial, lineaFinal);
-    bool ok = copiar(nombreOrigen, nombreDestino, lineaInicial, lineaFinal); 
-    if (ok) {
+    bool ficherosOk;
+    copiar(nombreOrigen, nombreDestino, lineaInicial, lineaFinal, ficherosOk); 
+    if (ficherosOk) {
         cout << "Fichero \"" << nombreDestino << "\" creado con éxito." << endl;
         return 0;
     } else {
