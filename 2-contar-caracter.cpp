@@ -24,7 +24,7 @@ using namespace std;
  * Post: Asigna al parámetro «apariciones» el número de veces que el carácter «caracter»
  *       aparece en «flujo».
  */
-void contarApariciones(istream& flujo, const char caracter, unsigned& apariciones) {
+void contarApariciones(istream &flujo, const char caracter, unsigned &apariciones) {
     apariciones = 0;
 
     char caracterLeido;
@@ -44,7 +44,7 @@ void contarApariciones(istream& flujo, const char caracter, unsigned& aparicione
  *       «lecturaOk» el valor «false».
  */
 void contarApariciones(const string nombreFichero, const char caracter, 
-                       unsigned& apariciones, bool& lecturaOk) {
+                       unsigned &apariciones, bool &lecturaOk) {
     lecturaOk = false;                        
     ifstream f;
     f.open(nombreFichero);

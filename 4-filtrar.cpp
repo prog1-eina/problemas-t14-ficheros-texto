@@ -26,7 +26,7 @@ using namespace std;
  *       y el nombre completo de cada estudiante que pertenece al grupo indicado por el valor
  *       del parámetro «grupo».
  */
-void filtrar(istream& origen, ostream& destino, const unsigned grupo) {
+void filtrar(istream &origen, ostream &destino, const unsigned grupo) {
     unsigned nip;
     while (origen >> nip) {
         unsigned grupoEstudiante;

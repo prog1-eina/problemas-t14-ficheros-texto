@@ -25,7 +25,7 @@ using namespace std;
  * Post: Copia en el flujo «origen» las líneas del flujo «destino» cuyo número se encuentra
  *       dentro del intervalo [«lineaInicial», «lineaFinal»].
  */
-void copiar(istream& origen, ostream& destino,
+void copiar(istream &origen, ostream &destino,
             const unsigned lineaInicial, const unsigned lineaFinal) {
     unsigned lineasLeidas = 0;
     string linea;
@@ -47,7 +47,7 @@ void copiar(istream& origen, ostream& destino,
  *       valor «false».
  */
 void copiar(const string ficheroOrigen, const string ficheroDestino,
-            const int lineaInicial, const int lineaFinal, bool& ok) {
+            const int lineaInicial, const int lineaFinal, bool &ok) {
     ifstream origen;
     origen.open(ficheroOrigen);
     if (origen.is_open()) {
@@ -76,8 +76,8 @@ void copiar(const string ficheroOrigen, const string ficheroDestino,
  *       enteros que representan un intervalo de líneas, que asigna a «lineaInicial» y
  *       «lineaFinal», asegurándose de que ambos son mayores o iguales que 0.
  */
-void pedirDatos(string& nombreOrigen, string& nombreDestino,
-                unsigned& lineaInicial, unsigned& lineaFinal) {
+void pedirDatos(string &nombreOrigen, string &nombreDestino,
+                unsigned &lineaInicial, unsigned &lineaFinal) {
     cout << "Nombre de un fichero existente: ";
     cin >> nombreOrigen;
 
