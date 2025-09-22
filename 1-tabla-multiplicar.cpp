@@ -1,17 +1,18 @@
-﻿/*********************************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 3 de Diciembre de 2020
  * Resumen: Soluciones a los problemas del tema 14
- * Nota: El programa completo está contenido en este fichero, por lo que puede compilarse y
- *       ejecutarse con la extensión Code Runner de Visual Studio Code.
+ * Nota: El programa completo está contenido en este fichero, por lo que puede
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio
+ *       Code.
  *       También puede compilarse desde la terminal través de la orden
  *           g++ -Wall -Wextra 1-tabla-multiplicar.cpp -o 1-tabla-multiplicar
  *       y ejecutarse en Windows a través de la orden
  *           .\1-tabla-multiplicar.exe
  *       o en Linux y macOS
  *           ./1-tabla-multiplicar
-\*********************************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include <iomanip>
@@ -21,7 +22,8 @@ using namespace std;
 
 /*
  * Pre:  1 ≤ n ≤ 10
- * Post: Escribe en el fichero de nombre «nombreFichero» la tabla de multiplicar del «n»:
+ * Post: Escribe en el fichero de nombre «nombreFichero» la tabla de
+ *       multiplicar del «n»:
  *
  *            LA TABLA DEL «n»
  *            «n» x  0 =  0
@@ -30,8 +32,8 @@ using namespace std;
  *                 ...
  *            «n» x  9 = ...
  *            «n» x 10 = ...
- *       Si no puede escribir el fichero de nombre «nombreFichero», escribe un mensaje de
- *       error en «cerr».
+ *       Si no puede escribir el fichero de nombre «nombreFichero», escribe un
+ *       mensaje de error en «cerr».
  */
 void escribirTablaEnFichero(const int n, const string nombreFichero) {
     ofstream f;
@@ -50,9 +52,9 @@ void escribirTablaEnFichero(const int n, const string nombreFichero) {
 }
 
 /*
- * Programa que solicita un número entero entre 1 y 10 y el nombre de un fichero 
- * y guarda en el fichero con el nombre introducido por el usuario la tabla de 
- * multiplicar correspondiente a ese número.
+ * Programa que solicita un número entero entre 1 y 10 y el nombre de un 
+ * fichero y guarda en el fichero con el nombre introducido por el usuario la
+ * tabla de  multiplicar correspondiente a ese número.
  */
 int main() {
     int n;
