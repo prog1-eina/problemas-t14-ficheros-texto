@@ -67,11 +67,11 @@ void contarApariciones(const string nombreFichero, const char caracter,
 int main() {
     cout << "Nombre del fichero: ";
     string nombreFichero;
-    cin >> nombreFichero;
+    getline(cin, nombreFichero);
 
     cout << "Escriba el carácter a contar: ";
     char caracter;
-    cin >> caracter;
+    cin.get(caracter);
 
     unsigned apariciones;
     bool lecturaOk;
