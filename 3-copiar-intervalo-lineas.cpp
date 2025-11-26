@@ -29,14 +29,14 @@ using namespace std;
  */
 void copiar(istream &origen, ostream &destino,
             const unsigned lineaInicial, const unsigned lineaFinal) {
-    unsigned lineasLeidas = 0;
+    unsigned numLineaActual = 1;
     string linea;
-    while (getline(origen, linea) && lineasLeidas < lineaFinal) {
+    while (numLineaActual <= lineaFinal && getline(origen, linea)) {
         // Si el último intento de lectura tuvo éxito, procesa la línea leída:
-        lineasLeidas++;
-        if (lineaInicial <= lineasLeidas && lineasLeidas <= lineaFinal) {
+        if (numLineaActual >= lineaInicial) {
             destino << linea << endl;
         }
+        numLineaActual++;
     }
 }
 
