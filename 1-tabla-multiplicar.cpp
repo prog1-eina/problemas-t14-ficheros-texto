@@ -46,7 +46,7 @@ void escribirTablaEnFichero(const int n, const string nombreFichero) {
         }
         f.close();
     } else {
-        cerr << "No se ha podido crear el fichero \"" << nombreFichero << "\""
+        cerr << "No se ha podido crear el fichero \"" << nombreFichero << "\"."
              << endl;
     }
 }
@@ -62,15 +62,11 @@ int main() {
         cout << "Introduzca un número: ";
         cin >> n;
     } while (n < 1 || n > 10);
-
     // 1 <= n <= 10 
-
-    // Extracción del último '\n' del teclado
-    cin.get(); 
 
     cout << "Nombre del fichero: ";
     string nombreFichero;
-    getline(cin, nombreFichero);
+    cin >> nombreFichero;
 
     escribirTablaEnFichero(n, nombreFichero);    
     return 0;

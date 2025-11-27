@@ -65,12 +65,12 @@ void filtrar(const string nombreOrigen, const string nombreDestino,
             destino.close();
         } else {
             cerr << "No se ha podido escribir en el fichero \""
-                 << nombreDestino << "\"" << endl;
+                 << nombreDestino << "\"." << endl;
         }
         origen.close();
     } else {
         cerr << "No se ha podido leer del fichero \""
-             << nombreOrigen << "\"" << endl;
+             << nombreOrigen << "\"." << endl;
     }
 }
 
