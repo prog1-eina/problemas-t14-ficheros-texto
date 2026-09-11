@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Tema 14 (Ficheros de texto)
  * Autores: Miguel Ángel Latre
- * Última revisión: 24 de noviembre de 2023
  * Resumen: Soluciones a los problemas del tema 14
  * Nota: El programa completo está contenido en este fichero, por lo que puede
  *       compilarse y ejecutarse con la extensión Code Runner de
