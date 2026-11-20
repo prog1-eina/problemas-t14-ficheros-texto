@@ -19,7 +19,6 @@
 #include <string>
 using namespace std;
 
-
 /*
  * Pre:  «nombreFichero» es el nombre de un fichero de texto válido y el número
  *       de componentes del vector «frecuencias» es igual al número de letras
@@ -55,7 +54,6 @@ void analizar(const string nombreFichero, unsigned frecuencias[]) {
     }
 }
 
-
 /*
  * Pre:  El número de componentes del vector «frecuencias» es igual al número
  *       de letras del alfabeto inglés. La primera componente del vector es el
@@ -70,7 +68,6 @@ void escribirFrecuencias(const unsigned frecuencias[]) {
         cout << letra << ": " << setw(7) << frecuencias[letra - 'A'] << endl;
     }
 }
-
 
 /* Programa de prueba */
 int main() {

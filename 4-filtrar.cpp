@@ -41,7 +41,6 @@ void filtrar(istream &origen, ostream &destino, const unsigned grupo) {
     }
 }
 
-
 /*
  * Pre:  «nombreOrigen» es el nombre de un fichero de texto donde cada línea
  *       corresponde a los siguientes datos de un estudiante, separados por
@@ -72,7 +71,6 @@ void filtrar(const string nombreOrigen, const string nombreDestino,
              << nombreOrigen << "\"." << endl;
     }
 }
-
 
 /*
  * Función de prueba. El fichero «estudiantes.txt» debe estar en el directorio

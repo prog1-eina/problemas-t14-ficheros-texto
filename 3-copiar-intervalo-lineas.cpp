@@ -99,7 +99,6 @@ void pedirDatos(string &nombreOrigen, string &nombreDestino,
     lineaFinal = fin;
 }
 
-
 /*
  * Programa que solicita al usuario el nombre de un fichero de texto existente,
  * el nombre de un fichero nuevo y dos enteros que representan un intervalo de
