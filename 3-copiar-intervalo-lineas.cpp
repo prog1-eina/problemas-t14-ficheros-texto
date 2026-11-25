@@ -57,15 +57,14 @@ void copiar(const string ficheroOrigen, const string ficheroDestino,
         destino.open(ficheroDestino);
         if (destino.is_open()) {
             copiar(origen, destino, lineaInicial, lineaFinal);
-            origen.close();
             destino.close();
             ok = true;
         } else {
-            origen.close();
             cerr << "No ha podido escribirse el fichero \""
                  << ficheroDestino << "\"." << endl;
             ok = false;
         }
+        origen.close();
     } else {
         cerr << "No ha podido leerse el fichero \""
              << ficheroOrigen << "\"." << endl;
