@@ -47,13 +47,14 @@ void contarApariciones(istream &flujo, const char caracter,
  */
 void contarApariciones(const string nombreFichero, const char caracter, 
                        unsigned &apariciones, bool &lecturaOk) {
-    lecturaOk = false;                        
     ifstream f;
     f.open(nombreFichero);
     if (f.is_open()) {
-        lecturaOk = true;
         contarApariciones(f, caracter, apariciones);
         f.close();
+        lecturaOk = true;
+    } else {
+        lecturaOk = false;
     }
 }
 
